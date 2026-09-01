@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adithya V | B.Tech AI & Data Science Student & Developer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Adithya V - B.Tech AI & Data Science student at REVA University. Passionate about C programming, Python, IoT, Machine Learning, and Software Development.">
+  <meta name="keywords" content="Adithya V, Portfolio, AI and Data Science, REVA University, C Programming, Python, ESP32-CAM, OpenCV, TensorFlow Lite, Data Structures, SQL">
+  <meta name="author" content="Adithya V">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Adithya V | B.Tech AI & Data Science Portfolio">
+  <meta property="og:description" content="Explore projects, skills, and certifications in AI, Data Science, C, and IoT by Adithya V.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Particle Canvas & Ambient Glows -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- ========================================================================
+       1. Navigation Bar
+       ======================================================================== -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" id="nav-brand-logo">
+        <div class="logo-badge">AV</div>
+        <span>Adithya<span class="gradient-text">.V</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm" id="nav-contact-cta">
+          <i class="fa-solid fa-paper-plane"></i> Get in Touch
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       2. Hero Section
+       ======================================================================== -->
+  <header class="section hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Intro & Taglines -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            <span>Open to Learning & Internship Opportunities</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Adithya V</span>
+          </h1>
+
+          <div class="hero-subtitle-wrapper">
+            <span>&gt;</span>
+            <span id="typing-text" class="typing-text">B.Tech AI & Data Science Student</span>
+          </div>
+
+          <p class="hero-description">
+            Building my programming and problem-solving skills through practical projects and continuous learning. Passionate about artificial intelligence, systems programming in C, Python development, and creating real-world software solutions.
+          </p>
+
+          <!-- Call to Actions -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" id="hero-projects-btn">
+              <i class="fa-solid fa-laptop-code"></i> View My Projects
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="hero-contact-btn">
+              <i class="fa-solid fa-envelope"></i> Contact Me
+            </a>
+            <a href="https://github.com/Adithyav2425" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="hero-github-btn">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+
+          <!-- Quick Stats Row -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-value gradient-text">8.78</span>
+              <span class="stat-label">Current CGPA (REVA Uni)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value gradient-text">3+</span>
+              <span class="stat-label">Featured Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value gradient-text">2029</span>
+              <span class="stat-label">B.Tech AI & DS Cohort</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Visual Avatar & Tech Card -->
+        <div class="hero-visual">
+          <div class="hero-card-frame">
+            <!-- Floating Badge -->
+            <div class="floating-badge badge-bottom-right">
+              <i class="fa-solid fa-microchip" style="color: var(--accent-cyan);"></i>
+              <span>IoT & Systems (C)</span>
+            </div>
+
+            <!-- Avatar -->
+            <div class="hero-avatar-wrapper">
+              <div class="hero-avatar-glow"></div>
+              <div class="hero-avatar-img">
+                <i class="fa-solid fa-user-astronaut"></i>
+              </div>
+            </div>
+
+            <h2 class="hero-card-name">Adithya V</h2>
+            <p class="hero-card-role">AI & Data Science Undergrad</p>
+
+            <div class="hero-card-tags">
+              <span class="tech-pill">C Programming</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Data Structures</span>
+              <span class="tech-pill">SQL</span>
+              <span class="tech-pill">OpenCV / TF Lite</span>
+            </div>
+
+            <div class="hero-social-links">
+              <a href="https://github.com/Adithyav2425" target="_blank" rel="noopener noreferrer" class="btn-icon" title="GitHub" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/adithya-vijay-061105207/" target="_blank" rel="noopener noreferrer" class="btn-icon" title="LinkedIn" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:Adithyavijaykumar09@gmail.com" class="btn-icon" title="Email" aria-label="Send Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       3. About Me & Career Goal Section
+       ======================================================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-user"></i> About Me</span>
+        <h2 class="section-title">Driven by Curiosity &amp; <span class="gradient-text">Practical Engineering</span></h2>
+        <p class="section-subtitle">A glimpse into my academic background, technical passions, and long-term aspirations.</p>
+      </div>
+
+      <div class="about-grid">
+        
+        <!-- Left: Bio & Career Goal -->
+        <div class="glass-card about-text-card">
+          <p>
+            I am a B.Tech student pursuing <strong>Artificial Intelligence and Data Science</strong> at <strong>REVA University</strong>. I have a strong foundation in C programming and basic knowledge of Python, and I am currently sharpening my knowledge in Data Structures and SQL.
+          </p>
+          <p>
+            I enjoy applying my programming knowledge to practical projects and improving my problem-solving skills through hands-on practice. I have built projects involving IoT, Python, and C programming, including an interactive <strong>2D Graphics Editor</strong> and an AI-powered <strong>Skin Cancer Detection system using ESP32-CAM</strong>.
+          </p>
+          <p>
+            I am strengthening my problem-solving skills through consistent DSA practice while expanding my database expertise in SQL and exploring modern developer tools.
+          </p>
+
+          <!-- Career Goal Highlight -->
+          <div class="career-goal-box">
+            <div class="career-goal-title">
+              <i class="fa-solid fa-bullseye"></i> Career Goal &amp; Vision
+            </div>
+            <p class="career-goal-text">
+              &ldquo;My goal is to build strong programming and problem-solving fundamentals, gain practical software development experience, and gradually grow into a skilled software professional.&rdquo;
+            </p>
+          </div>
+
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.5rem;">
+            <i class="fa-solid fa-briefcase" style="color: var(--accent-cyan); margin-right: 0.4rem;"></i>
+            I am actively interested in future internship opportunities where I can apply my programming fundamentals, gain hands-on industry experience, collaborate with experienced professionals, and contribute to impactful projects.
+          </p>
+        </div>
+
+        <!-- Right: Key Highlights / Focus Areas -->
+        <div class="about-features">
+          <div class="glass-card feature-box">
+            <div class="feature-icon icon-cyan">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="feature-info">
+              <h4>Core Programming &amp; Logic</h4>
+              <p>Strong grounding in C memory manipulation, algorithms, modular coding, and Python scripting fundamentals.</p>
+            </div>
+          </div>
+
+          <div class="glass-card feature-box">
+            <div class="feature-icon icon-violet">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div class="feature-info">
+              <h4>AI, Computer Vision &amp; IoT</h4>
+              <p>Experience integrating hardware (ESP32-CAM) with image preprocessing (OpenCV) and lightweight ML inference (TensorFlow Lite).</p>
+            </div>
+          </div>
+
+          <div class="glass-card feature-box">
+            <div class="feature-icon icon-emerald">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <div class="feature-info">
+              <h4>Data Analysis &amp; Databases</h4>
+              <p>Certified in Python data analysis (NumPy, Pandas, Matplotlib) with ongoing deep-dives into relational database modeling and SQL.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. Education Section
+       ======================================================================== -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academics</span>
+        <h2 class="section-title">Educational <span class="gradient-text">Background</span></h2>
+        <p class="section-subtitle">Academic milestones and core computer science &amp; AI coursework.</p>
+      </div>
+
+      <div class="education-wrapper">
+        <div class="glass-card timeline-card">
+          <div class="timeline-top">
+            <div class="uni-info">
+              <h3>REVA University</h3>
+              <p class="degree-title">Bachelor of Technology &ndash; Artificial Intelligence and Data Science</p>
+              <div class="grade-badge">
+                <i class="fa-solid fa-award"></i> Current Grade: 8.78 CGPA
+              </div>
+            </div>
+            <div class="timeline-badge">
+              <i class="fa-regular fa-calendar"></i> September 2025 &ndash; May 2029
+            </div>
+          </div>
+
+          <p style="margin-top: 1rem; color: var(--text-secondary);">
+            Pursuing comprehensive undergraduate engineering studies with a dedicated curriculum in AI fundamentals, algorithmic problem solving, modern programming paradigms, and database systems.
+          </p>
+
+          <div class="coursework-section">
+            <h4 class="coursework-title"><i class="fa-solid fa-book-open"></i> Relevant Areas of Study</h4>
+            <div class="course-tags">
+              <span class="course-tag"><i class="fa-solid fa-check" style="color: var(--accent-cyan);"></i> C Programming</span>
+              <span class="course-tag"><i class="fa-solid fa-check" style="color: var(--accent-cyan);"></i> Python</span>
+              <span class="course-tag"><i class="fa-solid fa-check" style="color: var(--accent-cyan);"></i> Data Structures</span>
+              <span class="course-tag"><i class="fa-solid fa-check" style="color: var(--accent-cyan);"></i> Database Management Systems</span>
+              <span class="course-tag"><i class="fa-solid fa-check" style="color: var(--accent-cyan);"></i> SQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. Skills & Learning Matrix Section
+       ======================================================================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-sliders"></i> Technical Stack</span>
+        <h2 class="section-title">Skills &amp; <span class="gradient-text">Proficiencies</span></h2>
+        <p class="section-subtitle">Technologies, libraries, and core engineering concepts I work with.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="skills-tabs">
+        <button class="skill-tab-btn active" data-filter="all">All Skills</button>
+        <button class="skill-tab-btn" data-filter="languages">Programming Languages</button>
+        <button class="skill-tab-btn" data-filter="data">Data Science &amp; ML</button>
+        <button class="skill-tab-btn" data-filter="web-db">Web &amp; Databases</button>
+        <button class="skill-tab-btn" data-filter="concepts">Core Fundamentals</button>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="skills-grid" id="skills-cards-grid">
+        
+        <!-- Category: Languages -->
+        <div class="glass-card skill-category-card" data-category="languages">
+          <div class="skill-cat-header">
+            <div class="cat-icon icon-cyan"><i class="fa-solid fa-terminal"></i></div>
+            <h4>Languages</h4>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-left">
+                <i class="fa-solid fa-c"></i>
+                <span class="skill-name">C</span>
+              </div>
+              <span class="skill-badge-type">Strong Foundation</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-left">
+                <i class="fa-brands fa-python"></i>
+                <span class="skill-name">Python</span>
+              </div>
+              <span class="skill-badge-type">Proficient</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Data Science & ML -->
+        <div class="glass-card skill-category-card" data-category="data">
+          <div class="skill-cat-header">
+            <div class="cat-icon icon-violet"><i class="fa-solid fa-chart-pie"></i></div>
+            <h4>Data &amp; ML Tools</h4>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-left">
+                <i class="fa-solid fa-cubes"></i>
+                <span class="skill-name">NumPy</span>
+              </div>
+              <span class="skill-badge-type">Array Math</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-left">
+                <i class="fa-solid fa-table"></i>
+                <span class="skill-name">Pandas</span>
+              </div>
+              <span class="skill-badge-type">Data Analysis</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-left">
+                <i class="fa-solid fa-chart-line"></i>
+                <span class="skill-name">Matplotlib</span>
+              </div>
+              <span class="skill-badge-type">Visualization</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Web & DB -->
+        <div class="glass-card skill-category-card" data-category="web-db">
+          <div class="skill-cat-header">
+            <div class="cat-icon icon-emerald"><i class="fa-solid fa-database"></i></div>
+            <h4>Web &amp; Database</h4>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-left">
+                <i class="fa-solid fa-server"></i>
+                <span class="skill-name">SQL</span>
+              </div>
+              <span class="skill-badge-type">Queries &amp; Schema</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-left">
+                <i class="fa-brands fa-html5"></i>
+                <span class="skill-name">HTML</span>
+              </div>
+              <span class="skill-badge-type">Semantic Markup</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-left">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span class="skill-name">CSS</span>
+              </div>
+              <span class="skill-badge-type">Responsive Layouts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Concepts -->
+        <div class="glass-card skill-category-card" data-category="concepts">
+          <div class="skill-cat-header">
+            <div class="cat-icon" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;"><i class="fa-solid fa-brain"></i></div>
+            <h4>Core Concepts</h4>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-left">
+                <i class="fa-solid fa-network-wired"></i>
+                <span class="skill-name">Data Structures</span>
+              </div>
+              <span class="skill-badge-type">Arrays, Lists, Trees</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-left">
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <span class="skill-name">Problem Solving</span>
+              </div>
+              <span class="skill-badge-type">Algorithmic Logic</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Areas of Interest & Currently Learning Grid -->
+      <div class="learning-interests-grid">
+        
+        <!-- Areas of Interest -->
+        <div class="glass-card special-info-card">
+          <h3 class="special-card-title">
+            <i class="fa-solid fa-compass" style="color: var(--accent-violet);"></i> Areas of Interest
+          </h3>
+          <p style="font-size: 0.9rem; margin-bottom: 1.25rem;">
+            Fields I am passionate about exploring and contributing to in my software career:
+          </p>
+          <div class="interest-chips">
+            <div class="interest-item">
+              <span class="interest-bullet"></span>
+              <div>
+                <strong style="color: var(--text-primary);">Software Development</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">Designing robust, clean, and scalable software systems.</p>
+              </div>
+            </div>
+            <div class="interest-item">
+              <span class="interest-bullet" style="background: var(--accent-cyan);"></span>
+              <div>
+                <strong style="color: var(--text-primary);">Full-Stack Development</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">Creating end-to-end applications bridging frontend UI and backend services.</p>
+              </div>
+            </div>
+            <div class="interest-item">
+              <span class="interest-bullet" style="background: var(--accent-emerald);"></span>
+              <div>
+                <strong style="color: var(--text-primary);">Data Science &amp; Machine Learning</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">Extracting insights and building predictive machine intelligence models.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Currently Learning & Coding Tracker -->
+        <div class="glass-card special-info-card">
+          <h3 class="special-card-title">
+            <i class="fa-solid fa-bolt" style="color: var(--accent-cyan);"></i> Currently Learning
+          </h3>
+          <div class="learning-tags">
+            <span class="learning-pill"><i class="fa-solid fa-arrow-trend-up"></i> Data Structures &amp; Algorithms</span>
+            <span class="learning-pill"><i class="fa-solid fa-arrow-trend-up"></i> SQL &amp; Database Design</span>
+            <span class="learning-pill"><i class="fa-solid fa-arrow-trend-up"></i> Advanced Python Techniques</span>
+            <span class="learning-pill"><i class="fa-solid fa-arrow-trend-up"></i> Programming Problem Solving</span>
+            <span class="learning-pill"><i class="fa-solid fa-arrow-trend-up"></i> Improving C Fundamentals</span>
+          </div>
+
+          <!-- LeetCode Spotlight -->
+          <div class="leetcode-box">
+            <div class="leetcode-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="leetcode-info">
+              <h5>LeetCode &amp; Problem Solving</h5>
+              <p>Actively practicing algorithmic programming problems to build strong daily consistency, time-complexity analysis, and analytical thinking.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. Featured Projects Showcase
+       ======================================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-folder-open"></i> Portfolio Showcase</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">Real-world systems, machine learning applications, and software tools I have engineered.</p>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1: Skin Cancer Detection using ESP32-CAM -->
+        <div class="glass-card project-card">
+          <div>
+            <div class="project-top">
+              <span class="project-category-badge">AI &bull; Computer Vision &bull; IoT</span>
+              <i class="fa-solid fa-microscope" style="font-size: 1.5rem; color: var(--accent-cyan);"></i>
+            </div>
+
+            <h3 class="project-title">Skin Cancer Detection using ESP32-CAM</h3>
+            
+            <p class="project-description">
+              An AI-powered edge screening system integrating an ESP32-CAM microcontroller module to capture real-time skin lesion images. The pipeline utilizes OpenCV for automated image preprocessing and contrast enhancement, followed by a TensorFlow / TensorFlow Lite machine learning model to analyze and classify lesions as normal or suspicious.
+            </p>
+
+            <!-- Specific Contribution Highlight -->
+            <div class="project-contribution">
+              <strong>Key Contribution:</strong>
+              Architected the hardware-to-software image acquisition stream via ESP32-CAM, implemented OpenCV preprocessing filters in Python, and integrated TensorFlow Lite inference for lightweight preliminary lesion screening.
+            </div>
+
+            <ul class="project-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> Low-cost, portable preliminary diagnostic tool</li>
+              <li><i class="fa-solid fa-circle-check"></i> Edge IoT camera integration with real-time capture</li>
+              <li><i class="fa-solid fa-circle-check"></i> OpenCV image enhancement &amp; lesion segmentation</li>
+              <li><i class="fa-solid fa-circle-check"></i> TensorFlow / TF Lite classification model</li>
+            </ul>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">ESP32-CAM</span>
+              <span class="tech-tag">IoT</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">TensorFlow Lite</span>
+            </div>
+          </div>
+
+          <div class="project-footer">
+            <a href="https://github.com/Adithyav2425" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+            <a href="#contact" class="btn btn-outline btn-sm">
+              <i class="fa-solid fa-info-circle"></i> Discuss Project
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: 2D Graphics Editor in C -->
+        <div class="glass-card project-card">
+          <div>
+            <div class="project-top">
+              <span class="project-category-badge" style="background: rgba(6, 182, 212, 0.12); color: var(--accent-cyan); border-color: var(--border-cyan);">C Programming &bull; Systems</span>
+              <i class="fa-solid fa-draw-polygon" style="font-size: 1.5rem; color: var(--accent-violet);"></i>
+            </div>
+
+            <h3 class="project-title">2D Graphics Editor (C &amp; Console API)</h3>
+            
+            <p class="project-description">
+              A menu-driven 2D Graphics Editor engineered in C using a 60 &times; 25 character-array virtual canvas. Designed with low-level matrix memory manipulation and Windows Console API for interactive rendering, shape generation, state persistence, and canvas clearing.
+            </p>
+
+            <ul class="project-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> 60 &times; 25 character-array dynamic 2D canvas</li>
+              <li><i class="fa-solid fa-circle-check"></i> 4 Geometric shapes: Rectangle, Circle, Line, Box</li>
+              <li><i class="fa-solid fa-circle-check"></i> Interactive Drawing, Erasing, and Clear Canvas</li>
+              <li><i class="fa-solid fa-circle-check"></i> File save &amp; state buffer export functionality</li>
+              <li><i class="fa-solid fa-circle-check"></i> Menu-driven console UI via Windows API</li>
+            </ul>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">2D Character Array</span>
+              <span class="tech-tag">Windows Console API</span>
+              <span class="tech-tag">Algorithms</span>
+            </div>
+
+            <!-- Embedded Interactive Live Simulator Widget -->
+            <div class="interactive-simulator-wrapper">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="terminal-title">live_c_canvas_simulator.c</span>
+              </div>
+              <div class="terminal-controls">
+                <button class="sim-btn active" data-sim-action="banner">Info</button>
+                <button class="sim-btn" data-sim-action="rect">Rect</button>
+                <button class="sim-btn" data-sim-action="circle">Circle</button>
+                <button class="sim-btn" data-sim-action="line">Line</button>
+                <button class="sim-btn" data-sim-action="box">Box</button>
+                <button class="sim-btn" data-sim-action="clear">Clear</button>
+                <button class="sim-btn" data-sim-action="save">Save</button>
+              </div>
+              <pre class="terminal-canvas-view" id="sim-canvas-display"></pre>
+            </div>
+
+          </div>
+
+          <div class="project-footer" style="margin-top: 1.5rem;">
+            <a href="https://github.com/Adithyav2425" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <i class="fa-brands fa-github"></i> View C Source
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: AquaSmart UI -->
+        <div class="glass-card project-card">
+          <div>
+            <div class="project-top">
+              <span class="project-category-badge" style="background: rgba(16, 185, 129, 0.12); color: var(--accent-emerald); border-color: rgba(16, 185, 129, 0.3);">Frontend &bull; Web UI</span>
+              <i class="fa-solid fa-droplet" style="font-size: 1.5rem; color: var(--accent-emerald);"></i>
+            </div>
+
+            <h3 class="project-title">AquaSmart &ndash; Smart Water Management</h3>
+            
+            <p class="project-description">
+              Contributed to the AquaSmart project by engineering the core user interface and responsive styling using HTML and CSS. The dashboard provides clean visual cues for real-time water monitoring, flow rate diagnostics, and conservation metrics.
+            </p>
+
+            <ul class="project-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> Clean, responsive UI built with modern HTML5 &amp; CSS3</li>
+              <li><i class="fa-solid fa-circle-check"></i> Modular cards for water diagnostics and alerts</li>
+              <li><i class="fa-solid fa-circle-check"></i> Accessible, user-friendly layout for conservation monitoring</li>
+            </ul>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">Responsive Design</span>
+              <span class="tech-tag">UI/UX</span>
+            </div>
+          </div>
+
+          <div class="project-footer">
+            <a href="https://github.com/Adithyav2425" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <i class="fa-brands fa-github"></i> Source Code
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. Certifications Section
+       ======================================================================== -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-certificate"></i> Credentials</span>
+        <h2 class="section-title">Certifications &amp; <span class="gradient-text">Badges</span></h2>
+        <p class="section-subtitle">Verified professional certificates earned in data analysis and technical proficiency.</p>
+      </div>
+
+      <div class="certifications-grid">
+        
+        <!-- Certificate 1: IBM Data Analysis -->
+        <div class="glass-card cert-card">
+          <div>
+            <div class="cert-top">
+              <div class="cert-issuer-icon cert-ibm">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div>
+                <h3 class="cert-title">Data Analysis with Python</h3>
+                <p class="cert-issuer">IBM Professional Certification</p>
+              </div>
+            </div>
+
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">Issued:</span>
+                <span class="cert-meta-val">December 2025</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">Credential ID:</span>
+                <span class="cert-meta-val">DA0101EN</span>
+              </div>
+            </div>
+
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+              Demonstrated practical competency in data wrangling, exploratory data analysis, statistical model development, and visualization utilizing Python libraries including Pandas, NumPy, and Scikit-Learn.
+            </p>
+          </div>
+
+          <div class="cert-status-badge">
+            <i class="fa-solid fa-circle-check"></i> Verified Credential
+          </div>
+        </div>
+
+        <!-- Certificate 2: Wadhwani Foundation Ignite Full -->
+        <div class="glass-card cert-card">
+          <div>
+            <div class="cert-top">
+              <div class="cert-issuer-icon cert-wadhwani">
+                <i class="fa-solid fa-fire"></i>
+              </div>
+              <div>
+                <h3 class="cert-title">Ignite Full Program</h3>
+                <p class="cert-issuer">Wadhwani Foundation</p>
+              </div>
+            </div>
+
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">Issued:</span>
+                <span class="cert-meta-val">May 2026</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">Program:</span>
+                <span class="cert-meta-val">Entrepreneurship &amp; Problem Solving</span>
+              </div>
+            </div>
+
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+              Completed rigorous practical coursework centered around innovative ideation, market validation, analytical problem formulation, and structured execution strategies.
+            </p>
+          </div>
+
+          <div class="cert-status-badge">
+            <i class="fa-solid fa-circle-check"></i> Verified Credential
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. Contact Section
+       ======================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-comments"></i> Connect</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-subtitle">I'm open to learning opportunities, internships, and technical collaborations.</p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Left: Contact Details & Copy Action -->
+        <div class="glass-card contact-info-card">
+          <div class="contact-intro">
+            <h3>Get in Touch</h3>
+            <p>
+              I am actively seeking internship opportunities and collaborative projects where I can apply my C/Python programming skills, learn from senior mentors, and deliver high-impact results.
+            </p>
+          </div>
+
+          <div class="contact-channels">
+            
+            <!-- Email Item -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Email Address</span>
+                <a href="mailto:Adithyavijaykumar09@gmail.com" class="contact-value">Adithyavijaykumar09@gmail.com</a>
+              </div>
+              <button class="copy-btn" id="copy-email-btn" title="Copy Email" aria-label="Copy Email to Clipboard">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- LinkedIn Item -->
+            <a href="https://www.linkedin.com/in/adithya-vijay-061105207/" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-icon" style="background: rgba(10, 102, 194, 0.15); color: #0a66c2;">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">LinkedIn Profile</span>
+                <span class="contact-value">linkedin.com/in/adithya-vijay-061105207</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </a>
+
+            <!-- GitHub Item -->
+            <a href="https://github.com/Adithyav2425" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-icon" style="background: rgba(255, 255, 255, 0.1); color: var(--text-primary);">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">GitHub Profile</span>
+                <span class="contact-value">github.com/Adithyav2425</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Right: Interactive Contact Form -->
+        <div class="glass-card contact-form-card">
+          <h3 class="form-title">Send a Direct Message</h3>
+          
+          <form id="portfolio-contact-form">
+            <div class="form-group">
+              <label for="sender-name" class="form-label">Your Name</label>
+              <input type="text" id="sender-name" class="form-control" placeholder="e.g. Alex Smith" required>
+            </div>
+
+            <div class="form-group">
+              <label for="sender-email" class="form-label">Your Email</label>
+              <input type="email" id="sender-email" class="form-control" placeholder="e.g. alex@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="sender-subject" class="form-label">Subject</label>
+              <input type="text" id="sender-subject" class="form-control" placeholder="Internship Opportunity / Project Collaboration">
+            </div>
+
+            <div class="form-group">
+              <label for="sender-message" class="form-label">Message</label>
+              <textarea id="sender-message" class="form-control" placeholder="Hi Adithya, I reviewed your portfolio and would like to discuss..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;" id="send-message-btn">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#hero" class="nav-logo">
+          <div class="logo-badge">AV</div>
+          <span>Adithya<span class="gradient-text">.V</span></span>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="hero-social-links">
+          <a href="https://github.com/Adithyav2425" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/adithya-vijay-061105207/" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:Adithyavijaykumar09@gmail.com" class="btn-icon" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Adithya V. Engineered with HTML5, Vanilla CSS3 &amp; JavaScript. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button class="back-to-top" id="back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Custom JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
